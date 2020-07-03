@@ -6,9 +6,17 @@ import View from 'ol/View';
 import TileLayer from 'ol/layer/Tile';
 import XYZ from 'ol/source/XYZ';
 import ImpsLogo from '../../assets/images/imps-logo.png';
+import {fromLonLat} from 'ol/proj';
+import coordinates from '../../utils/map/mapCoordinates';
 
 export default function SpaceMap() {
   useEffect(() => {
+    const animTime = 3000;
+    const thisView = new View({
+      center: [0, 0],
+      zoom: 3,
+    });
+
     new Map({
       target: 'map',
       layers: [
@@ -18,17 +26,26 @@ export default function SpaceMap() {
           }),
         }),
       ],
-      view: new View({
-        center: [0, 0],
-        zoom: 3,
-      }),
+      view: thisView,
+    });
+
+    coordinates.map(async (obj, i) => {
+      return setTimeout(() => {
+        console.log(i);
+
+        thisView.animate({
+          center: fromLonLat([obj['lat'], obj['lng']]),
+          duration: animTime,
+          zoom: obj['zoom'] - 7 || 4,
+        });
+      }, i * (animTime * 2));
     });
   });
 
   return (
     <div id='map'>
-      <img src={ImpsLogo} class='imps-logo' alt='IMPS' />
-      <div class='nasa-copyright'>Image Credit: NASA's Scientific Visualization Studio</div>
+      <img src={ImpsLogo} className='imps-logo' alt='IMPS' />
+      <div className='nasa-copyright'>Image Credit: NASA's Scientific Visualization Studio</div>
     </div>
   );
 }
