@@ -11,7 +11,7 @@ import coordinates from '../../utils/map/mapCoordinates';
 
 export default function SpaceMap() {
   useEffect(() => {
-    const animTime = 3000;
+    const animTime = 6000;
     const thisView = new View({
       center: [0, 0],
       zoom: 2,
@@ -32,11 +32,11 @@ export default function SpaceMap() {
     thisView.animate(
       {
         center: fromLonLat([coordinates[0]['lat'], coordinates[0]['lng']]),
-        duration: animTime * 2,
+        duration: animTime,
         zoom: 5,
       },
       {
-        duration: animTime * 2,
+        duration: animTime,
         zoom: 3,
       },
       {
