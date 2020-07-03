@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ui:
+    build: ./
+    restart: on-failure
+    volumes:
+      - ./:/usr/src/ui
+    working_dir: /usr/src/ui
+    ports:
+      - 3000:3000
+    command: ['npm', 'run', 'docker']
