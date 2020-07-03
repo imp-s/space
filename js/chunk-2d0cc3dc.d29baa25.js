@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0cc3dc"],{"4ca8":function(t,a,c){"use strict";c.r(a);var e=c("365c");a["default"]={save:function(t,a){return Object(e["a"])({url:t,headers:{"Content-Type":"multipart/form-data"},method:"POST",data:a})}}}}]);
-//# sourceMappingURL=chunk-2d0cc3dc.d29baa25.js.map
