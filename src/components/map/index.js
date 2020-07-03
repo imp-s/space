@@ -14,7 +14,7 @@ export default function SpaceMap() {
     const animTime = 3000;
     const thisView = new View({
       center: [0, 0],
-      zoom: 3,
+      zoom: 2,
     });
 
     new Map({
@@ -29,23 +29,22 @@ export default function SpaceMap() {
       view: thisView,
     });
 
-    coordinates.map(async (obj, i) => {
-      return setTimeout(() => {
-        console.log(obj.name);
-
-        thisView.animate(
-          {
-            duration: animTime,
-            zoom: 3,
-          },
-          {
-            center: fromLonLat([obj['lat'], obj['lng']]),
-            duration: animTime,
-            zoom: obj['zoom'] - 5 || 4,
-          }
-        );
-      }, i * (animTime * 3));
-    });
+    thisView.animate(
+      {
+        center: fromLonLat([coordinates[0]['lat'], coordinates[0]['lng']]),
+        duration: animTime * 2,
+        zoom: 5,
+      },
+      {
+        duration: animTime * 2,
+        zoom: 3,
+      },
+      {
+        center: fromLonLat([coordinates[1]['lat'], coordinates[1]['lng']]),
+        duration: animTime,
+        zoom: 5,
+      }
+    );
   });
 
   return (

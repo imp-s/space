@@ -7,8 +7,6 @@ export default [
   {name: 'Habitable Planet', lat: -7.722280278, lng: 49.96177083, zoom: 11},
   {name: 'Seeking Life', lat: -7.722280278, lng: 49.96177083, zoom: 11},
   {name: 'Star Quake', lat: -20.41097222, lng: 92.26383333, zoom: 11},
-  {name: 'Brown Dwarf Eclipse', lat: -5.391111111, lng: -96.07791667, zoom: 11},
-  {name: 'X-Ray Protection', lat: -5.391111111, lng: -96.07791667, zoom: 11},
   {name: 'Dusty Disks', lat: -76.53694, lng: -12.35208333, zoom: 11},
   {name: 'Tiny Solar System', lat: -76.53694444, lng: -12.35208333, zoom: 11},
   {name: 'Biggest Explosions', lat: 27.72538889, lng: 15.41183333, zoom: 11},
