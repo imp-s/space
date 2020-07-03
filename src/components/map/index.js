@@ -5,6 +5,7 @@ import Map from 'ol/Map';
 import View from 'ol/View';
 import TileLayer from 'ol/layer/Tile';
 import XYZ from 'ol/source/XYZ';
+import ImpsLogo from '../../assets/images/imps-logo.png';
 
 export default function SpaceMap() {
   useEffect(() => {
@@ -26,7 +27,7 @@ export default function SpaceMap() {
 
   return (
     <div id='map'>
-      <img src='' alt='IMPS' />
+      <img src={ImpsLogo} class='imps-logo' alt='IMPS' />
       <div class='nasa-copyright'>Image Credit: NASA's Scientific Visualization Studio</div>
     </div>
   );
