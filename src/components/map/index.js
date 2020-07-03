@@ -31,7 +31,7 @@ export default function SpaceMap() {
 
     coordinates.map(async (obj, i) => {
       return setTimeout(() => {
-        console.log(i);
+        console.log(obj.name);
 
         thisView.animate(
           {
