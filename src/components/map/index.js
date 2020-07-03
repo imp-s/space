@@ -33,12 +33,18 @@ export default function SpaceMap() {
       return setTimeout(() => {
         console.log(i);
 
-        thisView.animate({
-          center: fromLonLat([obj['lat'], obj['lng']]),
-          duration: animTime,
-          zoom: obj['zoom'] - 7 || 4,
-        });
-      }, i * (animTime * 2));
+        thisView.animate(
+          {
+            duration: animTime,
+            zoom: 3,
+          },
+          {
+            center: fromLonLat([obj['lat'], obj['lng']]),
+            duration: animTime,
+            zoom: obj['zoom'] - 5 || 4,
+          }
+        );
+      }, i * (animTime * 3));
     });
   });
 
