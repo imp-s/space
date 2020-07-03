@@ -10,13 +10,13 @@ import {fromLonLat} from 'ol/proj';
 import coordinates from '../../utils/map/mapCoordinates';
 
 export default function SpaceMap() {
-  useEffect(() => {
-    const animTime = 6000;
-    const thisView = new View({
-      center: [0, 0],
-      zoom: 2,
-    });
+  const animTime = 6000;
+  const thisView = new View({
+    center: [0, 0],
+    zoom: 2,
+  });
 
+  useEffect(() => {
     new Map({
       target: 'map',
       layers: [
