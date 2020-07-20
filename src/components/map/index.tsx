@@ -8,6 +8,7 @@ import XYZ from 'ol/source/XYZ';
 import ImpsLogo from '../../assets/images/imps-logo.png';
 import {fromLonLat} from 'ol/proj';
 import coordinates from '../../utils/map/mapCoordinates';
+import GitHubButton from "react-github-btn";
 
 export default function SpaceMap() {
   const animTime = 6000;
@@ -50,6 +51,17 @@ export default function SpaceMap() {
   return (
     <div id='map'>
       <img src={ImpsLogo} className='imps-logo' alt='IMPS' />
+
+      <div className="repo-stars">
+        <GitHubButton
+          href="https://github.com/imp-s/space"
+          data-show-count={true}
+          aria-label="Star imp-s/space on GitHub"
+        >
+          Stars
+        </GitHubButton>
+      </div>
+
       <div className='nasa-copyright'>Image Credit: NASA's Scientific Visualization Studio</div>
     </div>
   );

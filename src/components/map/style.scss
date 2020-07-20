@@ -37,4 +37,11 @@ body,
     top: 15px;
     user-select: none;
   }
+
+  .repo-stars {
+    position: absolute;
+    right: 15px;
+    top: 65px;
+    z-index: 1;
+  }
 }
