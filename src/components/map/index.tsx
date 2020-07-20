@@ -55,6 +55,7 @@ export default function SpaceMap() {
       <div className="repo-stars">
         <GitHubButton
           href="https://github.com/imp-s/space"
+          data-size="large"
           data-show-count={true}
           aria-label="Star imp-s/space on GitHub"
         >
