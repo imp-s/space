@@ -1,3 +1,3 @@
-FROM node:14.2.0-alpine
+FROM node:14.17.3-alpine
 
 RUN npm i -g @vue/cli
